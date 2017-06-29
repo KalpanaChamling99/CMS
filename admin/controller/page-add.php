@@ -1,6 +1,7 @@
 <?php
 require( __DIR__.'/../../inc/connection.php' );
 require( __DIR__.'/../../inc/functions.php' );
+	
 	$image  = $_POST['image'];
 	$pagetitle = $_POST['pagetitle'];
 	$pagecontent = $_POST['pagecontent'];

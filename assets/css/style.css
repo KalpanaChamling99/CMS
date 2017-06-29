@@ -114,23 +114,6 @@ form > h1{
 	background-color:#efefef;
 }
 
-#cms{
-	border-width:2px;
-	border-radius:5px;
-	display: block;
-    font-size: 4em;
-    font-weight: bold;
-    font-family:"Comic Sans MS";
-    width: 100%;
-
-	text-align:left;
-	/* box-shadow: 10px 10px 15px #1c1813; */
-	padding:2px;*/
-	margin: 2px;
-	background-color:#efefef;
-}
-
-
 
 
 
@@ -227,3 +210,5 @@ table{
     
 
 }
+/*Style for site configuration*/
+/*end of eite style*/

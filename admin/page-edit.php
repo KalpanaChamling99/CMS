@@ -1,8 +1,11 @@
 <?php
-require(__DIR__.'/../inc/header.php');
+$title = "Page Manager";
+require(__DIR__.'/inc/header.php');
+	
 	$pid  = $_GET['page_id'];
 	$select = "SELECT *from page WHERE id = $pid ";
 	$result =  mysql_query($select) or die(mysql_error());
+	
 	while( $arr = mysql_fetch_assoc($result))
 	 {
 	 	$pt= $arr['page_title'];
@@ -12,10 +15,11 @@ require(__DIR__.'/../inc/header.php');
 ?>
 	
  	<div id="menu">
-		<?php require(__DIR__.'/../inc/menu.php');?>
+		<?php require(__DIR__.'/inc/menu.php');?>
 	</div>
 	<div id="content">
 		<form method="post" action="controller/page-edit.php" enctype="multipart/form-data">
+			<h1>Page Edit</h1>
 			<div><input type = "text" name ="id" value = "<?php echo $pid;?>"></div>
 			<div><label>Page title</label></div>
 			<div><input type="text" name="pagetitle"  value="<?php echo $pt;?>"/></div>
@@ -30,12 +34,13 @@ require(__DIR__.'/../inc/header.php');
 					while($arr = mysql_fetch_assoc($result)){
 						foreach($arr as $value)
 				?>
-			<option><?php echo $value."<br/>"?></option>;<?php}?>
+			<option><?php echo $value."<br/>";?></option>
+				<?php
+					}
+				?>
 			</select>
 			
 			<input type="submit" value="submit"/>
-		</form>
-	</div>	
 		
 			
 			

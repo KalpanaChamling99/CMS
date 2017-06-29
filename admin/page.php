@@ -1,16 +1,21 @@
 <?php
-require(__DIR__.'/../inc/header.php');
+
+$title = "Page Manager";
+
+require(__DIR__.'/inc/header.php');
 require(__DIR__.'/../inc/connection.php');
 ?>
+
 <div id="menu">
-	<?php require(__DIR__.'/../inc/menu.php');?>
+	<?php require(__DIR__.'/inc/menu.php');?>
 </div>
 <div id="content">
-	<a href = "page-Add.php"> Add page</a>	
+	<h1><a href = "page-add.php"> Add page</a></h1>	
 	<table>
 		<?php
 			$select = "  SELECT * FROM page";
 			$result = mysql_query( $select ) or die (mysql_error());
+			
 			while( $arr = mysql_fetch_assoc($result)){
 				echo "<tr>";
 				echo "<td>".$arr["id"]."<br/>"."</td>";
