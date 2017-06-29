@@ -181,18 +181,6 @@ li{
 /*end of menu style*/
 
 
-/*style for page*/
-.scroll{
-	width:65%;
- 	height: 100%;
-	min-width:30%;
-	max-width:75%;
-	overflow: scroll;
-
-}
-
-/*end of page style*/
-
 
 
 /*style of table*/
